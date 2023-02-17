@@ -1,11 +1,20 @@
 namespace DotnetTddApproach
 {
     [TestClass]
-    public class UnitTest1
+    public class LoanRepositoryTest
     {
-        [TestMethod]
-        public void TestMethod1()
+        public LoanRepository loanRepository;
+
+        public LoanRepositoryTest(LoanRepository loanRepository)
         {
+            loanRepository = new LoanRepository();
+        }
+
+        [TestMethod]
+        public void Tester_GetLoanById_ShouldReturnLoan()
+        {
+            var loan = loanRepository.GetLoanById(12);
+            Assert.IsNotNull(loan);
         }
     }
 }
