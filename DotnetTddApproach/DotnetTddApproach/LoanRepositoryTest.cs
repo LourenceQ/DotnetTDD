@@ -1,3 +1,5 @@
+using LoanApplication.Core.Repository;
+
 namespace DotnetTddApproach
 {
     [TestClass]
