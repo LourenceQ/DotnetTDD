@@ -1,4 +1,6 @@
-﻿namespace LoanApplication.Core.Repository;
+﻿using LoanApplication.Core.Model;
+
+namespace LoanApplication.Core.Repository;
 
 public interface ILoanRepository
 {
