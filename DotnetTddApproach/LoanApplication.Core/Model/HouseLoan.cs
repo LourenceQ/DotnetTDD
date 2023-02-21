@@ -1,5 +1,5 @@
 ﻿namespace LoanApplication.Core.Model;
 
-public class HouseLoan
+public class HouseLoan : Loan
 {
 }

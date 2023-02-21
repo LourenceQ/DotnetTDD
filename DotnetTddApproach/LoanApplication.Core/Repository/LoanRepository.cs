@@ -2,7 +2,7 @@
 
 namespace LoanApplication.Core.Repository;
 
-public class LoanRepository : ILoanRepository
+public class LoanRepository
 {
     public List<LoanType> GetLoanTypes()
     {
@@ -21,7 +21,7 @@ public class LoanRepository : ILoanRepository
         this.rateParser = rateParser;
     }
 
-    public float GetCheapestRate(DTO.LoanType loanType)
+    public float GetCheapestRate(DTO.LoanDTO.LoanType  loanType)
     {
         return rateParser.GetRateByLoanType(loanType);
     }

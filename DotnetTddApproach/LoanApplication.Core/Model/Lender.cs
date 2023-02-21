@@ -1,5 +1,5 @@
 ﻿namespace LoanApplication.Core.Model;
 
-public class CarLoan : Loan
+public class Lender
 {
 }

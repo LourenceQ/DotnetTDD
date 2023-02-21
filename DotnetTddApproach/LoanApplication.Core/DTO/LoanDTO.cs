@@ -1,10 +1,8 @@
-﻿using LoanApplication.Core.Model;
-
-namespace LoanApplication.Core.DTO;
+﻿namespace LoanApplication.Core.DTO;
 
 public class LoanDTO
 {
-    public LoanType LoanType{ get; set; }
+    public LoanType LoanType { get; set; }
     public LocationType LocationType { get; set; }
     public JobType JobType { get; set; }
     public enum LoanType
