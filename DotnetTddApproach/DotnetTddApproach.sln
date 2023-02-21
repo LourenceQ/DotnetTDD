@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetTddApproach", "DotnetTddApproach\DotnetTddApproach.csproj", "{445B8E60-DD3F-4F23-B3FF-BC6579E17093}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplication.Core", "LoanApplication.Core\LoanApplication.Core.csproj", "{19AC600F-5263-43B3-8DF8-4176BE5A8D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApplication.Core", "LoanApplication.Core\LoanApplication.Core.csproj", "{19AC600F-5263-43B3-8DF8-4176BE5A8D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetTddApproach.NUnit", "DotnetTddApproach.NUnit\DotnetTddApproach.NUnit.csproj", "{FFCF593F-65A7-4915-8EC1-421698D07C6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCF593F-65A7-4915-8EC1-421698D07C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCF593F-65A7-4915-8EC1-421698D07C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCF593F-65A7-4915-8EC1-421698D07C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCF593F-65A7-4915-8EC1-421698D07C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
