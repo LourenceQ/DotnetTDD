@@ -1,4 +1,5 @@
-﻿using LoanApplication.Core.Model;
+﻿using LoanApplication.Core.DTO;
+using LoanApplication.Core.Model;
 
 namespace LoanApplication.Core;
 
@@ -14,6 +15,11 @@ public class RateParser : IRateParser
     }
 
     public float GetRateByLoanType(LoanType loanType)
+    {
+        throw new NotImplementedException();
+    }
+
+    public float GetRateByLoanType(LoanDTO.LoanType loanType)
     {
         throw new NotImplementedException();
     }

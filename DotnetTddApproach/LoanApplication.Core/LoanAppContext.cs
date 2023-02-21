@@ -1,4 +1,4 @@
-﻿using static LoanApplication.Core.DTO.LoanDTO;
+﻿using LoanApplication.Core.Model;
 
 namespace LoanApplication.Core;
 
@@ -17,7 +17,7 @@ public class LoanAppContext : IDbContext
     public bool Save()
     { throw new NotImplementedException(); }
 
-    public LoanType LoanType { get; set; }
-    public LocationType LocationType { get; set; }
-    public JobType JobType { get; set; }
+    public List<Loan> Loan { get; set; }
+    public List<CarLoan> CarLoan { get; set; }
+    public List<HouseLoan> HouseLoan { get; set; }
 }

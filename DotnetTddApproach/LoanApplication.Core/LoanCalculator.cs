@@ -12,23 +12,23 @@ public class LoanCalculator
         this.rateParser = rateParser;
     }
 
-    public virtual Loan CalculateLoan(LoanDTO loanDTO)
+    /*public virtual LoanDTO CalculateLoan(LoanDTO loanDTO)
     {
         Loan loan = new Loan();
-        if (loanDTO.LoanType == LoanType.CarLoan)
+        if (loanDTO.LoanTypeDTO == LoanDTO.LoanType.CarLoan )
         {
-            loan.LoanType = LoanType.CarLoan;
-            loan.InterestRate = rateParser.GetRateByLoanType(LoanType.CarLoan);
+            loan.LoanType = LoanDTO.LoanType.CarLoan;
+            loan.InterestRate = rateParser.GetRateByLoanType(LoanDTO.LoanType.CarLoan);
             // do other processing
         }
-        else if (loanDTO.LoanTypes == LoanType.HouseLoan)
+        else if (loanDTO.LoanTypeDTO == LoanDTO.LoanType.HouseLoan)
         {
-            loan.LoanType = LoanType.HouseLoan;
-            loan.InterestRate = rateParser.GetRateByLoanType(LoanType.HouseLoan);
+            loan.LoanTypeDTO = LoanDTO.LoanType.HouseLoan;
+            loan.InterestRate = rateParser.GetRateByLoanType(LoanDTO.LoanType.HouseLoan);
             // do other processing
         }
         return loan;
-    }
+    }*/
 
     public CarLoan CalculateCarLoan(LoanDTO loanDTO)
     {
@@ -50,8 +50,8 @@ public class LoanCalculator
         throw new NotImplementedException();
     }
 
-    public CurrencyConverter GetCurrencyConverter()
+    /*public CurrencyConverter GetCurrencyConverter()
     {
         return new CurrencyConverter();
-    }
+    }*/
 }

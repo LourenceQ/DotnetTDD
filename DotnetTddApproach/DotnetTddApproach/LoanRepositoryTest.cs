@@ -7,6 +7,10 @@ namespace DotnetTddApproach
     {
         public LoanRepository loanRepository;
 
+        public LoanRepositoryTest()
+        {
+        }
+
         public LoanRepositoryTest(LoanRepository loanRepository)
         {
             loanRepository = new LoanRepository();

@@ -1,4 +1,4 @@
-﻿using LoanApplication.Core.Model;
+﻿using static LoanApplication.Core.DTO.LoanDTO;
 
 namespace LoanApplication.Core;
 

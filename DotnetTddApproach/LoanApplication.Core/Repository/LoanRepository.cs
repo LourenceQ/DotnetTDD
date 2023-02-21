@@ -4,10 +4,6 @@ namespace LoanApplication.Core.Repository;
 
 public class LoanRepository
 {
-    public List<LoanType> GetLoanTypes()
-    {
-        throw new NotImplementedException();
-    }
     private DbContext dbContext;
     IRateParser rateParser;
 

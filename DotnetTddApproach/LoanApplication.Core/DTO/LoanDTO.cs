@@ -2,9 +2,10 @@
 
 public class LoanDTO
 {
-    public LoanType LoanType { get; set; }
-    public LocationType LocationType { get; set; }
-    public JobType JobType { get; set; }
+    public LoanType LoanTypeDTO { get; set; }
+    public LocationType LocationTypeDTO { get; set; }
+    public JobType JobTypeDTO { get; set; }
+
     public enum LoanType
     {
         CarLoan, HouseLoan
