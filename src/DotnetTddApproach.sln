@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetTddApproach.NUnit", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplication", "LoanApplication\LoanApplication.csproj", "{DD32E404-0E04-4271-81DA-4E09BE2E990C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplication.Tests.Unit.Controller", "LoanApplication.Tests.Unit.Controller\LoanApplication.Tests.Unit.Controller.csproj", "{0A69492A-2134-4139-A39E-3902DA1DA26E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DD32E404-0E04-4271-81DA-4E09BE2E990C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD32E404-0E04-4271-81DA-4E09BE2E990C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD32E404-0E04-4271-81DA-4E09BE2E990C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A69492A-2134-4139-A39E-3902DA1DA26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A69492A-2134-4139-A39E-3902DA1DA26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A69492A-2134-4139-A39E-3902DA1DA26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A69492A-2134-4139-A39E-3902DA1DA26E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
