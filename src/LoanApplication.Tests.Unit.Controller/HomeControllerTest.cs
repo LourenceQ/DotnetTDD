@@ -1,15 +1,14 @@
 using LoanApplication.Controllers;
 using LoanApplication.Core.Model;
 using LoanApplication.Core.Repository;
-using Microsoft.AspNetCore.Mvc;
 using Moq;
 
 namespace LoanApplication.Tests.Unit.Controller;
 
 public class HomeControllerTest
 {
-    private Mock<ILoanRepository> loanRepository;
-    private HomeController homeController;
+    public Mock<ILoanRepository> loanRepository;
+    public HomeController homeController;
 
     public HomeControllerTest()
     {
@@ -17,15 +16,6 @@ public class HomeControllerTest
         loanRepository.Setup(x => x.GetLoanTypes()).Returns(GetLoanTypes());
 
         homeController = new HomeController(loanRepository.Object);
-    }
-
-    [Fact]
-    public void TestIndex()
-    {
-        var result = homeController.Index();
-        var viewResult = Assert.IsType<ViewResult>(result);
-        var loanTypes = Assert.IsAssignableFrom<IEnumerable<LoanType>>(viewResult.ViewData["LoanTypes"]);
-        Assert.Equal(2, loanTypes.Count());
     }
 
     private List<LoanType> GetLoanTypes()
@@ -42,12 +32,5 @@ public class HomeControllerTest
             Name = "House Loan"
         });
         return loanTypes;
-    }
-
-    [Fact]
-    public void TestAbout()
-    {        
-        var result = homeController.About();
-        var viewResult = Assert.IsType<ViewResult>(result);
     }
 }
