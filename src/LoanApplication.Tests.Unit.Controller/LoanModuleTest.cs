@@ -3,25 +3,20 @@ using LoanApplication.Core.Model;
 
 namespace LoanApplication.Tests.Unit.Controller;
 
-public class LoanModuleTest : IDisposable
+public class LoanModuleTest : IClassFixture<EFCoreFixture>
 {
-    public LoanModuleTest(LoanAppContext context)
+    EFCoreFixture efCoreFixture;
+    public LoanModuleTest(EFCoreFixture eFCoreFixture)
     {
-        Context = new LoanAppContext();
-    }
-
-    public LoanAppContext Context { get; private set; }
-    public void Dispose()
-    {
-        Context = null;
+        this.efCoreFixture = eFCoreFixture;
     }
 
     [Fact]
     public void TestSAveLoan_ShouldReturnTrue()
     {
         Loan loan = new Loan { Description = "Car Loan" };
-        Context.Loan.Add(loan);
-        var isSaved = Context.Save();
+        efCoreFixture.Context.Loan.Add(loan);
+        var isSaved = efCoreFixture.Context.Save();
         Assert.True(isSaved);
     }
 }
