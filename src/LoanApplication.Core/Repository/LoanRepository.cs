@@ -17,7 +17,7 @@ public class LoanRepository
         this.rateParser = rateParser;
     }
 
-    public float GetCheapestRate(DTO.LoanDTO.LoanType  loanType)
+    public float GetCheapestRate(DTO.LoanType  loanType)
     {
         return rateParser.GetRateByLoanType(loanType);
     }
