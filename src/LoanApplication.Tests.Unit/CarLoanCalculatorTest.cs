@@ -1,7 +1,5 @@
 ﻿using LoanApplication.Core;
 using LoanApplication.Core.DTO;
-using LoanApplication.Core.Model;
-using static LoanApplication.Core.DTO.LoanDTO;
 
 namespace LoanApplication.Tests.Unit.Controller;
 
