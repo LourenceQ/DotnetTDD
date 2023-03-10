@@ -1,4 +1,4 @@
-﻿namespace LoanApplication.Core.Model;
+﻿namespace LoanApplication.Core;
 
 public class Loan
 {
@@ -8,7 +8,7 @@ public class Loan
 
     public float DiscountFactor { get; set; }
 
-    public LoanType LoanType { get; set; }
+    public LoanApplication.Core.DTO.LoanType LoanType { get; set; }
 
     public float InterestRate { get; set; }
 

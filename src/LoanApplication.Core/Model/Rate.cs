@@ -1,4 +1,4 @@
-﻿namespace LoanApplication.Core.Model;
+﻿namespace LoanApplication.Core;
 
 public class Rate
 {
