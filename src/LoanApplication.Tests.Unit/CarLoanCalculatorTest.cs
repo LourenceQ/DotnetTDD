@@ -12,14 +12,95 @@ public class CarLoanCalculatorTest
         this.carLoanCalculator = new CarLoanCalculator(rateParser);
     }
 
+    #region TESTE COM MEMBERDATA DE MÉTODO ESTÁTICO
+    /*[Theory, MemberData("GetLoanDTOs")]
+    //[Theory, MemberData(nameof(GetLoanDTOs)]
+    public void Test_CalculateLoan_ShouldReturnCorrectRate(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }
+
+    public static IEnumerable<object[]> GetLoanDTOs()
+    {
+        yield return new object[]
+        {
+            new LoanDTO
+            {
+                LoanType = LoanType.CarLoan,
+                JobType = JobType.Professional,
+                LocationType = LocationType.Location1
+            }
+        };
+
+        yield return new object[]
+        {
+            new LoanDTO
+            {
+                LoanType = LoanType.CarLoan,
+                JobType = JobType.Professional,
+                LocationType = LocationType.Location2
+            }
+        };
+    }*/
+    #endregion
+
+    #region TESTE COM MEMBERDATA DE PROPRIEDADE ESTÁTICA
+
+    /*[Theory, MemberData("LoanDTOs")]
+    public void Test_CalculateLoan_ShouldReturnCorrectRate2(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }
+
+    public static IEnumerable<object[]> LoanDTOs
+    {
+        get
+        {
+            yield return new object[]
+            {
+                new LoanDTO
+                {
+                    LoanType = LoanType.CarLoan,
+                    JobType = JobType.Professional,
+                    LocationType = LocationType.Location1
+                }
+            };
+
+            yield return new object[]
+            {
+                new LoanDTO
+                {
+                    LoanType = LoanType.CarLoan,
+                    JobType = JobType.Professional,
+                    LocationType = LocationType.Location2
+                }
+            };
+        }
+    }*/
+    #endregion
+    
+    #region TESTE COM MEMBDERDATA DE CLASSE ESPECIFICANDO A CLASSE DE TESTE COM MEMBERTYPE
+    /*[Theory, MemberData(nameof(LoanDTOs), parameters: 1, MemberType = typeof(DataClass))]
+    public void Test_CalculateLoan_ShouldReturnCorrectRate3(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }*/
+
+    #endregion
     [Fact]
-    public void Test_CalculateLoan_ShouldReturnLoan()
+    public void Test_CalculateLoan_ShouldReturnCorrectRate1()
     {
         // first scenario
         LoanDTO loanDTO1 = new LoanDTO();
-        loanDTO1.LoanTypeDTO = LoanDTO.LoanType.CarLoan;
-        loanDTO1.LocationTypeDTO = LocationType.Location1;
-        loanDTO1.JobTypeDTO = JobType.Professional;
+        loanDTO1.LoanType = LoanType.CarLoan;
+        loanDTO1.LocationType = LocationType.Location1;
+        loanDTO1.JobType = JobType.Professional;
         Loan loan1 = carLoanCalculator.CalculateLoan(loanDTO1);
 
         Assert.NotNull(loan1);
@@ -27,28 +108,12 @@ public class CarLoanCalculatorTest
 
         // second scenario
         LoanDTO loanDTO2 = new LoanDTO();
-        loanDTO2.LoanTypeDTO = LoanDTO.LoanType.CarLoan;
-        loanDTO2.LocationTypeDTO = LocationType.Location2;
-        loanDTO2.JobTypeDTO = JobType.Professional;
+        loanDTO2.LoanType = LoanType.CarLoan;
+        loanDTO2.LocationType = LocationType.Location2;
+        loanDTO2.JobType = JobType.Professional;
         Loan loan2 = carLoanCalculator.CalculateLoan(loanDTO2);
 
         Assert.NotNull(loan2);
         Assert.Equal(10, loan2.InterestRate);
-    }
-
-
-
-    [Theory, InlineData(new LoanDTO
-    {
-        LoanType = LoanDTO.LoanType.CarLoan
-    ,
-        JobType = JobType.Professional,
-        LocationTypeDTO = LocationType.Location1
-    })]
-    public void Test_CalculateLoan_ShouldReturnCorrectRate()
-    {
-        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
-        Assert.NotNull(loan);
-        Assert.Equal(8, loan.InterestRate);
     }
 }

@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using static LoanApplication.Core.DTO.LoanDTO;
+﻿using LoanApplication.Core.DTO;
+using Microsoft.AspNetCore.Mvc;
 
 namespace LoanApplication.Tests.Unit.Controller;
 

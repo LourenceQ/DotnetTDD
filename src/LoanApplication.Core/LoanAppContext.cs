@@ -17,7 +17,7 @@ public class LoanAppContext : IDbContext
     public bool Save()
     { throw new NotImplementedException(); }
 
-    public List<Loan> Loan { get; set; }
-    public List<CarLoan> CarLoan { get; set; }
-    public List<HouseLoan> HouseLoan { get; set; }
+    public List<Loan>? Loan { get; set; }
+    public List<CarLoan>? CarLoan { get; set; }
+    public List<HouseLoan>? HouseLoan { get; set; }
 }

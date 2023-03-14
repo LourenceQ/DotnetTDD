@@ -1,14 +1,14 @@
 ﻿using LoanApplication.Core.DTO;
 
-namespace LoanApplication.Tests.Unit.Controller;
+namespace LoanApplication.Tests.Unit;
 
 public class TheoryClass
 {
-    [Theory, InlineData(new LoanDTO {LoanType = LoanDTO.LoanType.CarLoan
-        , JobType = LoanDTO.JobType.Professional
-        , LocationType = LoanDTO.LocationType.Location1})]
+    /*[Theory, InlineData(new LoanDTO {LoanType = LoanType.CarLoan
+        , JobType = JobType.Professional
+        , LocationType = LocationType.Location1})]
     public void Test_CalculateLoan_ShouldReturnBoolean(LoanDTO loanDTO)
     {
         Assert.Equal(4, word.Length);
-    }
+    }*/
 }

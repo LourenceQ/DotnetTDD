@@ -14,7 +14,7 @@ public class DbContext : IDbContext
         throw new NotImplementedException();
     }
 
-    public List<Loan> Loan { get; set; }
-    public List<CarLoan> CarLoan { get; set; }
-    public List<HouseLoan> HouseLoan { get; set; }
+    public List<Loan>? Loan { get; set; }
+    public List<CarLoan>? CarLoan { get; set; }
+    public List<HouseLoan>? HouseLoan { get; set; }
 }

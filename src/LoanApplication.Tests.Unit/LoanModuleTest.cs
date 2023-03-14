@@ -1,4 +1,4 @@
-﻿using LoanApplication.Core.Model;
+﻿using LoanApplication.Core;
 
 namespace LoanApplication.Tests.Unit.Controller;
 
