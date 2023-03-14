@@ -1,6 +1,6 @@
 ﻿using LoanApplication.Core;
 
-namespace LoanApplication.Tests.Unit.Controller;
+namespace LoanApplication.Tests.Unit;
 
 public class EFCoreFixture : IDisposable
 {

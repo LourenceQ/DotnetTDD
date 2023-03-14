@@ -1,7 +1,7 @@
 ﻿using LoanApplication.Core.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LoanApplication.Tests.Unit.Controller;
+namespace LoanApplication.Tests.Unit;
 
 public class IndexMethod : HomeControllerTest
 {

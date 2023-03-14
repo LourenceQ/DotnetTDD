@@ -1,7 +1,7 @@
 ﻿using LoanApplication.Core;
 using LoanApplication.Core.DTO;
 
-namespace LoanApplication.Tests.Unit.Controller;
+namespace LoanApplication.Tests.Unit;
 
 public class CarLoanCalculatorTest
 {
@@ -82,16 +82,42 @@ public class CarLoanCalculatorTest
         }
     }*/
     #endregion
-    
+
     #region TESTE COM MEMBDERDATA DE CLASSE ESPECIFICANDO A CLASSE DE TESTE COM MEMBERTYPE
-    /*[Theory, MemberData(nameof(LoanDTOs), parameters: 1, MemberType = typeof(DataClass))]
+    /*[Theory, MemberData(nameof(DataClass.LoanDTOs), parameters: 1, MemberType = typeof(DataClass))]
     public void Test_CalculateLoan_ShouldReturnCorrectRate3(LoanDTO loanDTO)
     {
         Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
         Assert.NotNull(loan);
         Assert.InRange(loan.InterestRate, 8, 12);
     }*/
+    #endregion
 
+    #region TESTE COM MEMBDERDATA DE CLASSE ESPECIFICANDO A CLASSE DE TESTE COM MEMBERTYPE USANDO PROPRIEDADE DA CLASSE
+    /*[Theory, MemberData(nameof(DataClass2.GetLoanDTOs), parameters: 1, MemberType = typeof(DataClass2))]
+    public void Test_CalculateLoan_ShouldReturnCorrectRate4(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }
+*/
+    #region TESTE COM CLASSDATA DE CLASSE LOANDTODATA
+    [Theory, ClassData(typeof(LoanDTOData))]
+    public void Test_CalculateLoan_ShouldReturnCorrectRate5(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }
+    #endregion
+
+    public void Test_CalculateLoan_ShouldReturnCorrectRate3(LoanDTO loanDTO)
+    {
+        Loan loan = carLoanCalculator.CalculateLoan(loanDTO);
+        Assert.NotNull(loan);
+        Assert.InRange(loan.InterestRate, 8, 12);
+    }
     #endregion
     [Fact]
     public void Test_CalculateLoan_ShouldReturnCorrectRate1()

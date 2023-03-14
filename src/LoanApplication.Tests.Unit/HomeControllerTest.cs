@@ -3,7 +3,7 @@ using LoanApplication.Core.Model;
 using LoanApplication.Core.Repository;
 using Moq;
 
-namespace LoanApplication.Tests.Unit.Controller;
+namespace LoanApplication.Tests.Unit;
 
 public class HomeControllerTest
 {
