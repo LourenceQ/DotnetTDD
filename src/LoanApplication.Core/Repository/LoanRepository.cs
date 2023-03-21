@@ -22,9 +22,23 @@ public class LoanRepository
         return rateParser.GetRateByLoanType(loanType);
     }
 
-    public List<CarLoan> GetCarLoans()
+    /*public List<CarLoan> GetCarLoans()
     {
         return dbContext.CarLoan;
+    }*/
+
+    public List<Loan> GetBadCarLoans()
+    {
+        return dbContext.Loan.FindAll(c => c.HasDefaulted == true);
+    }
+    public List<Loan> GetCarLoans()
+    {
+        List<Loan> loans = new List<Loan>();
+        using (LoanContext context = new LoanContext())
+        {
+            loans = context.Loan.ToList();
+        }
+        return loans;
     }
 
     public Loan GetLoanById(int loanId)
