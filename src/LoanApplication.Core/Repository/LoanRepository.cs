@@ -2,7 +2,7 @@
 
 namespace LoanApplication.Core.Repository;
 
-public class LoanRepository
+public class LoanRepository : ILoanRepository
 {
     private DbContext dbContext;
     IRateParser rateParser;
@@ -68,7 +68,13 @@ public class LoanRepository
     private List<LoanType> GetLoanTypes()
     {
         var loanTypes = new List<LoanType>();
-        loanTypes.Add(new LoanType()
+        using (LoanContext context = new LoanContext())
+        {
+            loanTypes = context.LoanType.ToList();
+        }
+        return loanTypes;
+
+        /*loanTypes.Add(new LoanType()
         {
             Id = 1,
             Name = "Car Loan"
@@ -78,6 +84,11 @@ public class LoanRepository
             Id = 2,
             Name = "House Loan"
         });
-        return loanTypes;
+        return loanTypes;*/
+    }
+
+    List<LoanType> ILoanRepository.GetLoanTypes()
+    {
+        throw new NotImplementedException();
     }
 }
