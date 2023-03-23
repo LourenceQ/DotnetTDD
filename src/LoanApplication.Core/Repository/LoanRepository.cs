@@ -87,6 +87,18 @@ public class LoanRepository : ILoanRepository
         return loanTypes;*/
     }
 
+    public List<Person> GetCarLoanDefaulters(int year)
+    {
+        List<Person> defaulters = new List<Person>();
+        using (LoanContext context = new LoanContext())
+        {
+            defaulters = context.Loan.Where(c => c.HasDefaulted
+            && c.ServiceYear == year).Select(c => c.Person).ToList();
+        }
+        return defaulters;
+    }
+
+
     List<LoanType> ILoanRepository.GetLoanTypes()
     {
         throw new NotImplementedException();
