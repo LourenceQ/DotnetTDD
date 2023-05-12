@@ -7,5 +7,5 @@ public interface ILoanRepository
     List<LoanType> GetLoanTypes();
     List<Loan> GetBadCarLoans();
     List<Loan> GetCarLoans();
-    List<Person> GetCarLoanDefaulters(int year)
+    List<Person> GetCarLoanDefaulters(int year);
 }

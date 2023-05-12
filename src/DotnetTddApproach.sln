@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApplication.Core", "Loa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{FFCF593F-65A7-4915-8EC1-421698D07C6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplication", "LoanApplication\LoanApplication.csproj", "{DD32E404-0E04-4271-81DA-4E09BE2E990C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApplication", "LoanApplication\LoanApplication.csproj", "{DD32E404-0E04-4271-81DA-4E09BE2E990C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplication.Tests.Unit", "LoanApplication.Tests.Unit\LoanApplication.Tests.Unit.csproj", "{0A69492A-2134-4139-A39E-3902DA1DA26E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApplication.Tests.Unit", "LoanApplication.Tests.Unit\LoanApplication.Tests.Unit.csproj", "{0A69492A-2134-4139-A39E-3902DA1DA26E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsTest", "MsTest\MsTest.csproj", "{53DFAA1B-D5F0-461D-A0DA-5961DFD4A728}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsTest", "MsTest\MsTest.csproj", "{53DFAA1B-D5F0-461D-A0DA-5961DFD4A728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uqs.Arithmetic", "Uqs.Arithmetic\Uqs.Arithmetic.csproj", "{59951CC8-22E5-44AE-8E2F-CE86D161E8A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uqs.Arithmetic.Tests.Unit", "Uqs.Arithmetic.Tests.Unit\Uqs.Arithmetic.Tests.Unit.csproj", "{567C0257-7A9B-4523-AE43-5037D8087CF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{445B8E60-DD3F-4F23-B3FF-BC6579E17093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{445B8E60-DD3F-4F23-B3FF-BC6579E17093}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{445B8E60-DD3F-4F23-B3FF-BC6579E17093}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{445B8E60-DD3F-4F23-B3FF-BC6579E17093}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19AC600F-5263-43B3-8DF8-4176BE5A8D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,6 +43,14 @@ Global
 		{53DFAA1B-D5F0-461D-A0DA-5961DFD4A728}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53DFAA1B-D5F0-461D-A0DA-5961DFD4A728}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53DFAA1B-D5F0-461D-A0DA-5961DFD4A728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59951CC8-22E5-44AE-8E2F-CE86D161E8A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59951CC8-22E5-44AE-8E2F-CE86D161E8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59951CC8-22E5-44AE-8E2F-CE86D161E8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59951CC8-22E5-44AE-8E2F-CE86D161E8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567C0257-7A9B-4523-AE43-5037D8087CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567C0257-7A9B-4523-AE43-5037D8087CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567C0257-7A9B-4523-AE43-5037D8087CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567C0257-7A9B-4523-AE43-5037D8087CF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
